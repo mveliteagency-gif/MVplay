@@ -953,11 +953,14 @@
         <!-- Controls Row -->
         <div class="player-controls-row">
           <div class="controls-left">
+            <button id="btn-player-prev-channel" class="btn-control tv-focusable" title="Canal Anterior (PageUp)">⏮ Anterior</button>
             <button id="btn-player-play" class="btn-control btn-control-play tv-focusable" title="Play / Pause (Espaço)">⏸</button>
+            <button id="btn-player-next-channel" class="btn-control tv-focusable" title="Próximo Canal (PageDown)">Próximo ⏭</button>
             <button id="btn-player-aspect" class="btn-control tv-focusable" title="Proporção de Tela">⛶ Aspecto</button>
-            <button id="btn-player-channels" class="btn-control tv-focusable" title="Lista de Canais (Troca Rápida)">📋 Canais</button>
+            <button id="btn-player-channels" class="btn-control tv-focusable" title="Lista de Canais (Troca Rápida)">📋 Grade de Canais</button>
           </div>
           <div class="controls-right">
+            <button id="btn-player-epg" class="btn-control tv-focusable" title="Guia EPG (I)">ℹ Guia EPG</button>
             <button id="btn-player-fullscreen" class="btn-control tv-focusable" title="Tela Cheia (F)">🗖 Tela Cheia</button>
           </div>
         </div>
@@ -997,10 +1000,12 @@
 
     <!-- Action Buttons -->
     <div class="remote-actions-row">
-      <button class="remote-btn" id="remote-back">↩ Voltar</button>
-      <button class="remote-btn" id="remote-home">🏠 Home</button>
-      <button class="remote-btn" id="remote-playpause">⏯ Play/Pause</button>
-      <button class="remote-btn" id="remote-info">ℹ Info / EPG</button>
+      <button class="remote-btn" id="remote-ch-prev" title="Canal Anterior (PageUp)">CH -</button>
+      <button class="remote-btn" id="remote-playpause" title="Play/Pause">⏯ Play</button>
+      <button class="remote-btn" id="remote-ch-next" title="Próximo Canal (PageDown)">CH +</button>
+      <button class="remote-btn" id="remote-back" title="Voltar (Esc)">↩ Voltar</button>
+      <button class="remote-btn" id="remote-home" title="Início">🏠 Home</button>
+      <button class="remote-btn" id="remote-info" title="EPG Guia">ℹ EPG</button>
     </div>
 
     <div class="remote-hint-text">

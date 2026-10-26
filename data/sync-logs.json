@@ -1,5 +1,18 @@
 [
   {
+    "id": "sync-1793055226546",
+    "timestamp": "2026-10-26T22:53:46.546Z",
+    "source": "Sincronizador Automático de Catálogo Plataoplomo TV",
+    "status": "success",
+    "channelsUpdated": 15,
+    "moviesUpdated": 6,
+    "seriesUpdated": 3,
+    "newItems": 0,
+    "duplicatesRemoved": 0,
+    "deadLinks": 0,
+    "durationMs": 3
+  },
+  {
     "id": "sync-1793050772964",
     "timestamp": "2026-10-26T21:39:32.964Z",
     "source": "Sincronizador Automático de Catálogo Plataoplomo TV",

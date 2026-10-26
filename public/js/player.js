@@ -29,7 +29,14 @@ const Player = {
   playItem(item, type = 'live', channelList = []) {
     this.currentItem = item;
     this.currentType = type;
-    this.channelsList = channelList;
+    
+    // Ensure channelList is populated from App if empty
+    if ((!channelList || channelList.length === 0) && window.App && window.App.allChannels) {
+      this.channelsList = window.App.allChannels;
+    } else {
+      this.channelsList = channelList || [];
+    }
+
     this.retryCount = 0;
 
     // Open player view
@@ -77,6 +84,28 @@ const Player = {
     }, 200);
   },
 
+  nextChannel() {
+    if (this.currentType !== 'live' || !this.channelsList || this.channelsList.length === 0) return;
+    const currentIndex = this.channelsList.findIndex(c => c.id === this.currentItem.id);
+    const nextIndex = (currentIndex + 1) % this.channelsList.length;
+    const nextCh = this.channelsList[nextIndex];
+    this.playItem(nextCh, 'live', this.channelsList);
+    if (window.App && window.App.showToast) {
+      window.App.showToast(`Canal ${nextCh.number}: ${nextCh.name}`);
+    }
+  },
+
+  previousChannel() {
+    if (this.currentType !== 'live' || !this.channelsList || this.channelsList.length === 0) return;
+    const currentIndex = this.channelsList.findIndex(c => c.id === this.currentItem.id);
+    const prevIndex = (currentIndex - 1 + this.channelsList.length) % this.channelsList.length;
+    const prevCh = this.channelsList[prevIndex];
+    this.playItem(prevCh, 'live', this.channelsList);
+    if (window.App && window.App.showToast) {
+      window.App.showToast(`Canal ${prevCh.number}: ${prevCh.name}`);
+    }
+  },
+
   loadStream(url) {
     if (!url) {
       this.showError('URL de vídeo não configurada para este conteúdo.');
@@ -119,7 +148,11 @@ const Player = {
           switch (data.type) {
             case Hls.ErrorTypes.NETWORK_ERROR:
               console.warn('HLS Network Error, attempting recovery...');
-              if (this.retryCount < this.maxRetries) {
+              if (this.retryCount === 0 && !url.includes('/api/stream/proxy')) {
+                this.retryCount++;
+                console.log('Tentando via proxy anti-CORS da plataforma...');
+                this.loadStream('/api/stream/proxy?url=' + encodeURIComponent(url));
+              } else if (this.retryCount < this.maxRetries) {
                 this.retryCount++;
                 this.hls.startLoad();
               } else if (this.currentItem.backupStreamUrl) {
@@ -354,6 +387,9 @@ const Player = {
     // Player action buttons
     document.getElementById('btn-player-back')?.addEventListener('click', () => this.close());
     document.getElementById('btn-player-play')?.addEventListener('click', () => this.togglePlay());
+    document.getElementById('btn-player-prev-channel')?.addEventListener('click', () => this.previousChannel());
+    document.getElementById('btn-player-next-channel')?.addEventListener('click', () => this.nextChannel());
+    document.getElementById('btn-player-epg')?.addEventListener('click', () => this.toggleEpgGuide());
     document.getElementById('btn-player-fullscreen')?.addEventListener('click', () => this.toggleFullscreen());
     document.getElementById('btn-player-aspect')?.addEventListener('click', () => this.cycleAspectRatio());
     document.getElementById('btn-player-channels')?.addEventListener('click', () => this.toggleChannelOverlay());

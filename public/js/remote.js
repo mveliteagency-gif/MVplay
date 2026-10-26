@@ -214,6 +214,22 @@ const Remote = {
             Player.togglePlay();
           }
           break;
+        case 'PageUp':
+        case 'p':
+        case 'P':
+          if (Player.isOpen()) {
+            e.preventDefault();
+            Player.previousChannel();
+          }
+          break;
+        case 'PageDown':
+        case 'n':
+        case 'N':
+          if (Player.isOpen()) {
+            e.preventDefault();
+            Player.nextChannel();
+          }
+          break;
         case 'f':
         case 'F':
           if (Player.isOpen()) {
@@ -265,6 +281,12 @@ const Remote = {
     });
     document.getElementById('remote-info')?.addEventListener('click', () => {
       if (Player.isOpen()) Player.toggleEpgGuide();
+    });
+    document.getElementById('remote-ch-prev')?.addEventListener('click', () => {
+      if (Player.isOpen()) Player.previousChannel();
+    });
+    document.getElementById('remote-ch-next')?.addEventListener('click', () => {
+      if (Player.isOpen()) Player.nextChannel();
     });
   }
 };
