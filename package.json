@@ -1,0 +1,18 @@
+{
+  "name": "mvplay",
+  "version": "1.0.0",
+  "description": "MVplay - Plataforma Completa de IPTV, Streaming VOD e Navegação para Smart TV / Android TV",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node tests/test-suite.js"
+  },
+  "keywords": ["iptv", "streaming", "smart-tv", "android-tv", "vod", "hls", "plataoplomo"],
+  "author": "Plataoplomo TV Engineering Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

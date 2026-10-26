@@ -1,0 +1,28 @@
+[
+  {
+    "id": "sync-1793050772964",
+    "timestamp": "2026-10-26T21:39:32.964Z",
+    "source": "Sincronizador Automático de Catálogo Plataoplomo TV",
+    "status": "success",
+    "channelsUpdated": 12,
+    "moviesUpdated": 6,
+    "seriesUpdated": 3,
+    "newItems": 0,
+    "duplicatesRemoved": 0,
+    "deadLinks": 0,
+    "durationMs": 21
+  },
+  {
+    "id": "sync-1",
+    "timestamp": "2026-10-26T18:00:00Z",
+    "source": "Lista IPTV Principal (M3U / Xtream Codes)",
+    "status": "success",
+    "channelsUpdated": 12,
+    "moviesUpdated": 6,
+    "seriesUpdated": 3,
+    "newItems": 0,
+    "duplicatesRemoved": 2,
+    "deadLinks": 0,
+    "durationMs": 420
+  }
+]

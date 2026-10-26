@@ -1,0 +1,32 @@
+{
+  "channels": [
+    { "id": "all", "name": "Todos os Canais", "icon": "📺" },
+    { "id": "sports", "name": "Esportes Ao Vivo", "icon": "⚽" },
+    { "id": "open", "name": "TV Aberta & Nacional", "icon": "📡" },
+    { "id": "movies_series", "name": "Filmes & Séries", "icon": "🎬" },
+    { "id": "news", "name": "Notícias 24h", "icon": "📰" },
+    { "id": "kids", "name": "Infantil", "icon": "👶" },
+    { "id": "docs", "name": "Documentários & Ciência", "icon": "🌍" },
+    { "id": "international", "name": "Internacionais", "icon": "🌐" },
+    { "id": "music", "name": "Música & Shows", "icon": "🎵" }
+  ],
+  "movies": [
+    { "id": "all", "name": "Todos os Filmes", "icon": "🎬" },
+    { "id": "action", "name": "Ação & Aventura", "icon": "💥" },
+    { "id": "scifi", "name": "Ficção Científica", "icon": "🚀" },
+    { "id": "drama", "name": "Drama", "icon": "🎭" },
+    { "id": "comedy", "name": "Comédia", "icon": "😂" },
+    { "id": "animation", "name": "Animação & Família", "icon": "🎨" },
+    { "id": "thriller", "name": "Suspense & Crime", "icon": "🕵️" },
+    { "id": "documentary", "name": "Documentário", "icon": "📽️" }
+  ],
+  "series": [
+    { "id": "all", "name": "Todas as Séries", "icon": "📺" },
+    { "id": "drama", "name": "Drama & Suspense", "icon": "🎭" },
+    { "id": "scifi", "name": "Ficção & Fantasia", "icon": "🐉" },
+    { "id": "action", "name": "Ação & Policial", "icon": "🔫" },
+    { "id": "comedy", "name": "Comédia", "icon": "🤣" },
+    { "id": "kdrama", "name": "K-Dramas & Séries Coreanas", "icon": "🥢" },
+    { "id": "documentary", "name": "Documentais", "icon": "🔍" }
+  ]
+}

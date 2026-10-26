@@ -1,0 +1,30 @@
+{
+  "epg-premiere-clubes": [
+    { "title": "Brasileirão Série A: Flamengo vs Palmeiras", "start": "16:00", "end": "18:00", "description": "Transmissão ao vivo do clássico no Maracanã com imagem 4K HDR e som imersivo." },
+    { "title": "Linha de Passe - Debate da Rodada", "start": "18:00", "end": "19:30", "description": "Mesa redonda pós-jogo com análises táticas e melhores momentos." },
+    { "title": "Brasileirão Série A: São Paulo vs Corinthians", "start": "19:30", "end": "21:30", "description": "Majestoso no Morumbi com cobertura exclusiva." }
+  ],
+  "epg-sportv1": [
+    { "title": "Redação SporTV Especial", "start": "15:00", "end": "17:00", "description": "Debate esportivo e notícias em tempo real." },
+    { "title": "Copa do Brasil - Pré-Jogo", "start": "17:00", "end": "19:00", "description": "Entrevistas exclusivas e escalações confirmadas." },
+    { "title": "Copa do Brasil: Quartas de Final", "start": "19:00", "end": "21:30", "description": "Decisão emocionante ao vivo." }
+  ],
+  "epg-espn-brasil": [
+    { "title": "Premier League: Man City vs Liverpool", "start": "15:30", "end": "17:30", "description": "Duelo de gigantes no Etihad Stadium com narração em português." },
+    { "title": "SportsCenter 1ª Edição", "start": "17:30", "end": "19:00", "description": "Gols da rodada e destaques do futebol europeu." },
+    { "title": "NBA Ao Vivo: Lakers vs Celtics", "start": "19:00", "end": "21:30", "description": "A maior rivalidade do basquete mundial." }
+  ],
+  "epg-globo-sp": [
+    { "title": "Jornal Nacional Especial", "start": "16:30", "end": "17:45", "description": "As principais notícias do Brasil e do mundo com William Bonner." },
+    { "title": "Novela das 9: Vale Tudo", "start": "17:45", "end": "19:00", "description": "Capítulo imperdível com grandes reviravoltas." },
+    { "title": "Futebol 2026: Brasil vs Argentina", "start": "19:00", "end": "21:15", "description": "Amistoso internacional no Maracanã." }
+  ],
+  "epg-telecine-premium": [
+    { "title": "Duna: Parte 2 (2024)", "start": "15:45", "end": "18:30", "description": "Superprodução de ficção científica vencedora de prêmios." },
+    { "title": "Oppenheimer (2023)", "start": "18:30", "end": "21:30", "description": "Vencedor de 7 Oscars incluindo Melhor Filme." }
+  ],
+  "epg-hbo-brasil": [
+    { "title": "A Casa do Dragão - T2:E4", "start": "16:00", "end": "17:15", "description": "A Batalha do Repouso das Graças." },
+    { "title": "The Last of Us - T1:E9", "start": "17:15", "end": "18:15", "description": "Final da primeira temporada: Procure pela Luz." }
+  ]
+}

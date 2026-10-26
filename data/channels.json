@@ -1,0 +1,350 @@
+[
+  {
+    "id": "premiere-clubes",
+    "number": 1,
+    "name": "Premiere Clubes 4K",
+    "category": "sports",
+    "logo": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=120&auto=format&fit=crop&q=80",
+    "description": "Campeonato Brasileiro Série A e B com a maior cobertura esportiva do país em 4K HDR.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "format": "HLS",
+    "quality": "4K HDR",
+    "resolution": "3840x2160",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-premiere-clubes",
+    "currentShow": {
+      "title": "Brasileirão Série A: Flamengo vs Palmeiras",
+      "start": "16:00",
+      "end": "18:00",
+      "progress": 65
+    },
+    "nextShow": {
+      "title": "Linha de Passe - Debate da Rodada",
+      "start": "18:00",
+      "end": "19:30"
+    },
+    "featured": true
+  },
+  {
+    "id": "sportv-1",
+    "number": 2,
+    "name": "SporTV 1 FHD",
+    "category": "sports",
+    "logo": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=120&auto=format&fit=crop&q=80",
+    "description": "O canal campeão. Futebol nacional, Copa Libertadores, vôlei e atletismo.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "format": "HLS",
+    "quality": "1080p FHD",
+    "resolution": "1920x1080",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-sportv1",
+    "currentShow": {
+      "title": "Redação SporTV Especial",
+      "start": "15:00",
+      "end": "17:00",
+      "progress": 80
+    },
+    "nextShow": {
+      "title": "Copa do Brasil - Pré-Jogo",
+      "start": "17:00",
+      "end": "19:00"
+    },
+    "featured": true
+  },
+  {
+    "id": "espn-brasil",
+    "number": 3,
+    "name": "ESPN Brasil 4K",
+    "category": "sports",
+    "logo": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=120&auto=format&fit=crop&q=80",
+    "description": "Premier League inglesa, La Liga espanhola, NBA e NFL ao vivo com transmissão em português.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    "format": "HLS",
+    "quality": "4K HDR",
+    "resolution": "3840x2160",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-espn-brasil",
+    "currentShow": {
+      "title": "Premier League: Man City vs Liverpool",
+      "start": "15:30",
+      "end": "17:30",
+      "progress": 45
+    },
+    "nextShow": {
+      "title": "SportsCenter 1ª Edição",
+      "start": "17:30",
+      "end": "19:00"
+    },
+    "featured": true
+  },
+  {
+    "id": "bandsports",
+    "number": 4,
+    "name": "BandSports HD",
+    "category": "sports",
+    "logo": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=120&auto=format&fit=crop&q=80",
+    "description": "Fórmula 1, automobilismo internacional, artes marciais e ligas europeias.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    "format": "HLS",
+    "quality": "1080p FHD",
+    "resolution": "1920x1080",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-bandsports",
+    "currentShow": {
+      "title": "Super Formula & Treinos Livres F1",
+      "start": "16:00",
+      "end": "17:30",
+      "progress": 30
+    },
+    "nextShow": {
+      "title": "Bate-Bola Na Rede",
+      "start": "17:30",
+      "end": "18:45"
+    },
+    "featured": false
+  },
+  {
+    "id": "globo-sp",
+    "number": 5,
+    "name": "TV Globo SP 4K",
+    "category": "open",
+    "logo": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=120&auto=format&fit=crop&q=80",
+    "description": "Programação da Rede Globo com novelas, jornais e futebol ao vivo com latência zero.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "format": "HLS",
+    "quality": "4K HDR",
+    "resolution": "3840x2160",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-globo-sp",
+    "currentShow": {
+      "title": "Jornal Nacional Especial",
+      "start": "16:30",
+      "end": "17:45",
+      "progress": 50
+    },
+    "nextShow": {
+      "title": "Novela das 9: Vale Tudo",
+      "start": "17:45",
+      "end": "19:00"
+    },
+    "featured": true
+  },
+  {
+    "id": "sbt-hd",
+    "number": 6,
+    "name": "SBT Rede HD",
+    "category": "open",
+    "logo": "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=120&auto=format&fit=crop&q=80",
+    "description": "Champions League, programas de entretenimento, auditório e novelas.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+    "format": "HLS",
+    "quality": "1080p FHD",
+    "resolution": "1920x1080",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-sbt-hd",
+    "currentShow": {
+      "title": "Champions League Ao Vivo: Real Madrid vs Bayern",
+      "start": "16:00",
+      "end": "18:00",
+      "progress": 70
+    },
+    "nextShow": {
+      "title": "Programa do Ratinho Especial",
+      "start": "18:00",
+      "end": "19:30"
+    },
+    "featured": false
+  },
+  {
+    "id": "record-tv",
+    "number": 7,
+    "name": "Record TV HD",
+    "category": "open",
+    "logo": "https://images.unsplash.com/photo-1533518463841-d62e1fc91373?w=120&auto=format&fit=crop&q=80",
+    "description": "Paulistão ao vivo, Jornal da Record e superproduções bíblicas.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+    "format": "HLS",
+    "quality": "1080p FHD",
+    "resolution": "1920x1080",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-record-tv",
+    "currentShow": {
+      "title": "Balanço Geral - Tarde",
+      "start": "15:00",
+      "end": "17:15",
+      "progress": 90
+    },
+    "nextShow": {
+      "title": "Cidade Alerta Ao Vivo",
+      "start": "17:15",
+      "end": "19:45"
+    },
+    "featured": false
+  },
+  {
+    "id": "telecine-premium",
+    "number": 8,
+    "name": "Telecine Premium 4K",
+    "category": "movies_series",
+    "logo": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=120&auto=format&fit=crop&q=80",
+    "description": "Os maiores sucessos do cinema direto da tela dos cinemas para a sua casa.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "format": "HLS",
+    "quality": "4K HDR",
+    "resolution": "3840x2160",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-telecine-premium",
+    "currentShow": {
+      "title": "Duna: Parte 2 (2024)",
+      "start": "15:45",
+      "end": "18:30",
+      "progress": 35
+    },
+    "nextShow": {
+      "title": "Oppenheimer (2023)",
+      "start": "18:30",
+      "end": "21:30"
+    },
+    "featured": true
+  },
+  {
+    "id": "hbo-brasil",
+    "number": 9,
+    "name": "HBO Max Channel 4K",
+    "category": "movies_series",
+    "logo": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=120&auto=format&fit=crop&q=80",
+    "description": "Séries originais multipremiadas, House of the Dragon, Succession e cinema de autor.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "format": "HLS",
+    "quality": "4K HDR",
+    "resolution": "3840x2160",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-hbo-brasil",
+    "currentShow": {
+      "title": "A Casa do Dragão - T2:E4",
+      "start": "16:00",
+      "end": "17:15",
+      "progress": 55
+    },
+    "nextShow": {
+      "title": "The Last of Us - T1:E9",
+      "start": "17:15",
+      "end": "18:15"
+    },
+    "featured": true
+  },
+  {
+    "id": "globonews",
+    "number": 10,
+    "name": "GloboNews 24h FHD",
+    "category": "news",
+    "logo": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=120&auto=format&fit=crop&q=80",
+    "description": "Notícias em tempo real, análises políticas e cobertura dos principais fatos do Brasil e do mundo.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "format": "HLS",
+    "quality": "1080p FHD",
+    "resolution": "1920x1080",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-globonews",
+    "currentShow": {
+      "title": "Estúdio i Ao Vivo",
+      "start": "15:00",
+      "end": "17:30",
+      "progress": 60
+    },
+    "nextShow": {
+      "title": "Edição das 18h com César Tralli",
+      "start": "17:30",
+      "end": "19:00"
+    },
+    "featured": false
+  },
+  {
+    "id": "discovery-channel",
+    "number": 11,
+    "name": "Discovery Channel 4K",
+    "category": "docs",
+    "logo": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=120&auto=format&fit=crop&q=80",
+    "description": "Ciência, tecnologia, sobrevivência extrema, engenharia e cosmos em resolução ultra nítida.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "format": "HLS",
+    "quality": "4K HDR",
+    "resolution": "3840x2160",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-discovery-channel",
+    "currentShow": {
+      "title": "Planeta Terra: O Milagre dos Oceanos",
+      "start": "16:00",
+      "end": "17:00",
+      "progress": 85
+    },
+    "nextShow": {
+      "title": "Como Funciona o Universo",
+      "start": "17:00",
+      "end": "18:00"
+    },
+    "featured": false
+  },
+  {
+    "id": "cartoon-network",
+    "number": 12,
+    "name": "Cartoon Network HD",
+    "category": "kids",
+    "logo": "https://images.unsplash.com/photo-1563089145-599997674d42?w=120&auto=format&fit=crop&q=80",
+    "description": "As melhores animações infantis e infanto-juvenis 24 horas por dia.",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "backupStreamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    "format": "HLS",
+    "quality": "1080p FHD",
+    "resolution": "1920x1080",
+    "fps": 60,
+    "language": "pt-BR",
+    "status": "online",
+    "epgId": "epg-cartoon-network",
+    "currentShow": {
+      "title": "O Incrível Mundo de Gumball",
+      "start": "16:30",
+      "end": "17:00",
+      "progress": 70
+    },
+    "nextShow": {
+      "title": "Hora de Aventura: Terras Distantes",
+      "start": "17:00",
+      "end": "18:00"
+    },
+    "featured": false
+  }
+]

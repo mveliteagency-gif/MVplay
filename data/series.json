@@ -1,0 +1,145 @@
+[
+  {
+    "id": "house-of-the-dragon",
+    "title": "A Casa do Dragão",
+    "originalTitle": "House of the Dragon",
+    "year": 2024,
+    "rating": "18",
+    "score": "8.7",
+    "quality": "4K HDR",
+    "category": "scifi",
+    "genres": ["Ação", "Aventura", "Drama", "Fantasia"],
+    "poster": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&auto=format&fit=crop&q=80",
+    "backdrop": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1280&auto=format&fit=crop&q=80",
+    "synopsis": "A história da Casa Targaryen, ambientada cerca de 200 anos antes dos eventos de Game of Thrones, retrata o início do fim da Casa Targaryen e os eventos que levaram à guerra civil conhecida como a Dança dos Dragões.",
+    "featured": true,
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "name": "Temporada 1",
+        "episodesCount": 10,
+        "episodes": [
+          {
+            "episodeNumber": 1,
+            "title": "Os Herdeiros do Dragão",
+            "duration": "1h 06min",
+            "synopsis": "O Rei Viserys I organiza um torneio para celebrar o iminente nascimento de seu segundo filho.",
+            "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+            "thumbnail": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&auto=format&fit=crop&q=80"
+          },
+          {
+            "episodeNumber": 2,
+            "title": "O Príncipe Rebelde",
+            "duration": "54min",
+            "synopsis": "Rhaenyra descobre um segredo perturbador sobre os planos da corte.",
+            "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            "thumbnail": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=400&auto=format&fit=crop&q=80"
+          },
+          {
+            "episodeNumber": 3,
+            "title": "O Segundo de Seu Nome",
+            "duration": "1h 03min",
+            "synopsis": "Daemon e a Serpente do Mar lutam contra o Engorda Caranguejos nos Degraus.",
+            "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+            "thumbnail": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&auto=format&fit=crop&q=80"
+          }
+        ]
+      },
+      {
+        "seasonNumber": 2,
+        "name": "Temporada 2",
+        "episodesCount": 8,
+        "episodes": [
+          {
+            "episodeNumber": 1,
+            "title": "Filho por Filho",
+            "duration": "1h 04min",
+            "synopsis": "Após a trágica morte de Lucerys, Rhaenyra jura vingança sangrenta contra Porto Real.",
+            "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+            "thumbnail": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400&auto=format&fit=crop&q=80"
+          },
+          {
+            "episodeNumber": 2,
+            "title": "Rhaenyra, a Cruel",
+            "duration": "1h 08min",
+            "synopsis": "As repercussões do assassinato causam comoção e divisão entre os Verdes e os Pretos.",
+            "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+            "thumbnail": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=400&auto=format&fit=crop&q=80"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the-last-of-us",
+    "title": "The Last of Us",
+    "originalTitle": "The Last of Us",
+    "year": 2023,
+    "rating": "16",
+    "score": "8.8",
+    "quality": "4K HDR",
+    "category": "action",
+    "genres": ["Ação", "Aventura", "Drama", "Ficção Científica"],
+    "poster": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
+    "backdrop": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1280&auto=format&fit=crop&q=80",
+    "synopsis": "Vinte anos após uma praga fúngica quase extinguir a humanidade, o sobrevivente calejado Joel é contratado para contrabandear a garota de 14 anos Ellie para fora de uma zona de quarentena opressiva.",
+    "featured": true,
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "name": "Temporada 1",
+        "episodesCount": 9,
+        "episodes": [
+          {
+            "episodeNumber": 1,
+            "title": "Quando Você Se Perde na Escuridão",
+            "duration": "1h 21min",
+            "synopsis": "Vinte anos após o surto de fungos transformar a civilização, Joel é contratado para uma missão perigosa.",
+            "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            "thumbnail": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=400&auto=format&fit=crop&q=80"
+          },
+          {
+            "episodeNumber": 2,
+            "title": "Infectados",
+            "duration": "53min",
+            "synopsis": "Joel, Tess e Ellie enfrentam os perigos de uma Boston inundada e infestada de infectados.",
+            "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+            "thumbnail": "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&auto=format&fit=crop&q=80"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shogun",
+    "title": "Xógum: A Gloriosa Saga do Japão",
+    "originalTitle": "Shōgun",
+    "year": 2024,
+    "rating": "18",
+    "score": "9.1",
+    "quality": "4K HDR",
+    "category": "drama",
+    "genres": ["Drama", "Histórico", "Aventura"],
+    "poster": "https://images.unsplash.com/photo-1528164344705-475426879c0d?w=500&auto=format&fit=crop&q=80",
+    "backdrop": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1280&auto=format&fit=crop&q=80",
+    "synopsis": "No Japão do ano 1600, o Lord Yoshii Toranaga luta por sua vida contra seus inimigos no Conselho de Regentes, quando um navio europeu misterioso é encontrado abandonado em uma vila de pescadores.",
+    "featured": true,
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "name": "Temporada 1",
+        "episodesCount": 10,
+        "episodes": [
+          {
+            "episodeNumber": 1,
+            "title": "Anjin",
+            "duration": "1h 10min",
+            "synopsis": "John Blackthorne naufraga no Japão feudal e cai nas mãos do poderoso Lorde Toranaga.",
+            "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+            "thumbnail": "https://images.unsplash.com/photo-1528164344705-475426879c0d?w=400&auto=format&fit=crop&q=80"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Plataoplomo TV — Plataforma Premium de Streaming e IPTV em 4K HDR</title>
+  <meta name="description" content="Plataoplomo TV: A melhor lista IPTV do Brasil. Mais de 18.000 canais ao vivo, 50.000 filmes e séries em 4K HDR, servidores dedicados sem travar e compatibilidade com Smart TV e Android TV.">
+
+  <!-- Google Fonts: Cormorant Garamond & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- HLS.js for Adaptive Bitrate Streaming -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.8/dist/hls.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/tv.css">
+  <link rel="stylesheet" href="/css/player.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="announce-bar">
+    <span>📺 Plataoplomo TV — A melhor lista IPTV do Brasil sem travar</span>
+    <a href="#" class="btn-teste-gratis">Teste Grátis 6h em menos de 2 min</a>
+  </div>
+
+  <!-- APPLICATION HEADER -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-logo tv-focusable" data-route="home">
+        <div class="logo-badge">P</div>
+        <div class="brand-name">Plataoplomo<span>TV</span></div>
+      </div>
+
+      <nav class="main-nav">
+        <a class="nav-link tv-focusable active" data-route="home">
+          <span>🏠 Início</span>
+        </a>
+        <a class="nav-link tv-focusable" data-route="live">
+          <span>📡 Canais Ao Vivo</span>
+        </a>
+        <a class="nav-link tv-focusable" data-route="movies">
+          <span>🎬 Filmes 4K</span>
+        </a>
+        <a class="nav-link tv-focusable" data-route="series">
+          <span>📺 Séries</span>
+        </a>
+        <a class="nav-link tv-focusable" data-route="mylist">
+          <span>★ Minha Lista</span>
+        </a>
+        <a class="nav-link tv-focusable" data-route="search">
+          <span>🔍 Buscar</span>
+        </a>
+        <a class="nav-link tv-focusable" data-route="settings">
+          <span>⚙️ Configurações</span>
+        </a>
+        <a class="nav-link tv-focusable" data-route="admin" style="color:var(--champagne)">
+          <span>🛡️ Painel Admin</span>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="tv-mode-badge tv-focusable" id="tv-mode-indicator" title="Clique para alternar Modo TV (Controle Remoto)">
+          <span>🎮 Controle TV</span>
+        </div>
+        <button class="btn-gold tv-focusable btn-teste-gratis">
+          <span>▶ Teste Grátis</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN VIEWPORT -->
+  <main class="app-viewport">
+
+    <!-- ================= PAGE 1: HOME ================= -->
+    <div id="page-home" class="app-page">
+      <!-- Spotlight Banner -->
+      <section class="hero-spotlight" id="home-hero-spotlight"></section>
+
+      <!-- Telemetry Stats Banner -->
+      <section class="stats-banner">
+        <div class="stat-box">
+          <div class="stat-value">18.000+</div>
+          <div class="stat-label">Canais Ao Vivo</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">50.000+</div>
+          <div class="stat-label">Filmes & Séries VOD</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">4K HDR</div>
+          <div class="stat-label">Qualidade Máxima Estável</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">99.9%</div>
+          <div class="stat-label">Disponibilidade Sem Travar</div>
+        </div>
+      </section>
+
+      <!-- Row: Continue Assistindo (Dynamic) -->
+      <section id="row-continue-watching" style="display:none; margin-bottom: 40px">
+        <div class="section-header">
+          <h2 class="section-title"><span class="icon">⏱</span> Continue Assistindo</h2>
+        </div>
+        <div class="horizontal-scroll-container" id="carousel-continue-watching"></div>
+      </section>
+
+      <!-- Row: Esportes Ao Vivo -->
+      <section style="margin-bottom: 40px">
+        <div class="section-header">
+          <h2 class="section-title"><span class="icon">⚽</span> Esportes Ao Vivo Sem Travar</h2>
+          <span class="section-link tv-focusable" data-route="live">Ver todos os esportes →</span>
+        </div>
+        <div class="horizontal-scroll-container" id="carousel-sports"></div>
+      </section>
+
+      <!-- Row: Canais Mais Assistidos -->
+      <section style="margin-bottom: 40px">
+        <div class="section-header">
+          <h2 class="section-title"><span class="icon">🔥</span> Canais Mais Assistidos</h2>
+          <span class="section-link tv-focusable" data-route="live">Grade completa EPG →</span>
+        </div>
+        <div class="horizontal-scroll-container" id="carousel-popular-channels"></div>
+      </section>
+
+      <!-- Row: Filmes 4K em Alta -->
+      <section style="margin-bottom: 40px">
+        <div class="section-header">
+          <h2 class="section-title"><span class="icon">🎬</span> Filmes em 4K HDR</h2>
+          <span class="section-link tv-focusable" data-route="movies">Explorar catálogo de filmes →</span>
+        </div>
+        <div class="horizontal-scroll-container" id="carousel-movies"></div>
+      </section>
+
+      <!-- Row: Séries Premiadas -->
+      <section style="margin-bottom: 40px">
+        <div class="section-header">
+          <h2 class="section-title"><span class="icon">📺</span> Séries Premiadas</h2>
+          <span class="section-link tv-focusable" data-route="series">Explorar séries →</span>
+        </div>
+        <div class="horizontal-scroll-container" id="carousel-series"></div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 2: AO VIVO ================= -->
+    <div id="page-live" class="app-page" style="display:none">
+      <div style="margin-bottom: 24px">
+        <span class="badge-tag">Guia de Programação EPG 7 Dias</span>
+        <h1 style="font-size:2.2rem; font-weight:800; color:#fff">Canais Ao Vivo</h1>
+        <p style="color:var(--text-muted)">Transmissões esportivas, canais abertos, cinema, notícias e infantis com servidores dedicados e latência zero.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="category-filter-bar" id="live-categories-bar"></div>
+
+      <!-- Channels Grid -->
+      <div class="channels-grid" id="live-channels-grid"></div>
+    </div>
+
+    <!-- ================= PAGE 3: FILMES 4K ================= -->
+    <div id="page-movies" class="app-page" style="display:none">
+      <div style="margin-bottom: 24px">
+        <span class="badge-tag">Catálogo Sob Demanda</span>
+        <h1 style="font-size:2.2rem; font-weight:800; color:#fff">Filmes em 4K HDR</h1>
+        <p style="color:var(--text-muted)">Mais de 50.000 títulos disponíveis com áudio Dolby Atmos 5.1 e dublagens em português.</p>
+      </div>
+
+      <!-- Genre Filter Pills -->
+      <div class="category-filter-bar" id="movies-categories-bar"></div>
+
+      <!-- Movies Grid -->
+      <div class="catalog-grid" id="movies-grid"></div>
+    </div>
+
+    <!-- ================= PAGE 4: SÉRIES ================= -->
+    <div id="page-series" class="app-page" style="display:none">
+      <div style="margin-bottom: 24px">
+        <span class="badge-tag">Temporadas Completas</span>
+        <h1 style="font-size:2.2rem; font-weight:800; color:#fff">Séries Premiadas</h1>
+        <p style="color:var(--text-muted)">Produções da HBO, Prime Video, doramas coreanos e novelas sem anúncios.</p>
+      </div>
+
+      <!-- Genre Filter Pills -->
+      <div class="category-filter-bar" id="series-categories-bar"></div>
+
+      <!-- Series Grid -->
+      <div class="catalog-grid" id="series-grid"></div>
+    </div>
+
+    <!-- ================= PAGE 5: BUSCA ================= -->
+    <div id="page-search" class="app-page" style="display:none">
+      <div style="margin-bottom: 24px">
+        <h1 style="font-size:2.2rem; font-weight:800; color:#fff">Buscar no Plataoplomo TV</h1>
+        <p style="color:var(--text-muted)">Encontre instantaneamente qualquer canal, filme, série ou partida esportiva.</p>
+      </div>
+
+      <div class="search-box-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="global-search-input" class="search-input tv-focusable" placeholder="Buscar por canal, filme, série, ator ou time...">
+      </div>
+
+      <div id="search-results-container">
+        <div style="text-align: center; padding: 60px 20px; color: var(--text-muted)">
+          <div style="font-size: 3rem; margin-bottom: 12px">🔍</div>
+          <h3>Digite o nome de um canal, filme ou série para buscar</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= PAGE 6: MINHA LISTA ================= -->
+    <div id="page-mylist" class="app-page" style="display:none">
+      <div style="margin-bottom: 30px">
+        <h1 style="font-size:2.2rem; font-weight:800; color:#fff">Minha Lista & Favoritos</h1>
+        <p style="color:var(--text-muted)">Acesse rapidamente seus canais favoritos e continue seus filmes e séries.</p>
+      </div>
+
+      <!-- Favorite Channels -->
+      <section style="margin-bottom: 40px">
+        <h3 style="color:#fff; font-size:1.3rem; margin-bottom:16px">★ Canais Favoritos</h3>
+        <div class="channels-grid" id="mylist-channels-grid"></div>
+      </section>
+
+      <!-- Favorite Movies & Series -->
+      <section style="margin-bottom: 40px">
+        <h3 style="color:#fff; font-size:1.3rem; margin-bottom:16px">★ Filmes e Séries Favoritos</h3>
+        <div class="catalog-grid" id="mylist-movies-grid"></div>
+      </section>
+
+      <!-- Watch History -->
+      <section style="margin-bottom: 40px">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px">
+          <h3 style="color:#fff; font-size:1.3rem">⏱ Histórico de Reprodução</h3>
+          <button class="btn-secondary tv-focusable" id="btn-clear-history" style="font-size:0.8rem">Limpar Histórico</button>
+        </div>
+        <div class="catalog-grid" id="mylist-history-grid"></div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 7: CONFIGURAÇÕES & GUIA ================= -->
+    <div id="page-settings" class="app-page" style="display:none">
+      <div style="margin-bottom: 30px">
+        <h1 style="font-size:2.2rem; font-weight:800; color:#fff">Configurações & Guias de Instalação</h1>
+        <p style="color:var(--text-muted)">Ajustes de reprodução, controle remoto e instruções para Smart TVs e TV Box.</p>
+      </div>
+
+      <!-- Settings Form -->
+      <div class="form-card">
+        <h3 style="color:var(--gold); margin-bottom:16px">Preferências do Player e Reprodução</h3>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Tamanho do Buffer de Vídeo (Anti-Travamento)</label>
+            <select id="setting-buffer-size" class="form-select tv-focusable">
+              <option value="5">Rápido (5 segundos - Menor latência)</option>
+              <option value="15" selected>Equilibrado (15 segundos - Recomendado)</option>
+              <option value="30">Máxima Estabilidade (30 segundos - Para conexões oscilantes)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Modo TV / Controle Remoto (Android TV / Smart TV)</label>
+            <label style="display:flex; align-items:center; gap:10px; margin-top:8px; cursor:pointer">
+              <input type="checkbox" id="setting-tv-mode" style="width:18px; height:18px; accent-color:var(--gold)">
+              <span>Ativar interface adaptada para TV e foco em destaque</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Installation Guide Accordions / Cards -->
+      <h3 style="color:#fff; font-size:1.4rem; margin:36px 0 16px">Como Instalar nos Seus Dispositivos</h3>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px">
+        <div class="form-card">
+          <div style="font-size:1.8rem; margin-bottom:8px">📺</div>
+          <h4 style="color:#fff; font-size:1.1rem; margin-bottom:6px">Samsung Smart TV (Tizen)</h4>
+          <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.5">
+            Abra a Samsung Apps na TV, instale o aplicativo <strong>IPTV Smarters Pro</strong> ou <strong>IBO Player</strong>. Insira as credenciais do seu Teste Grátis (URL, Usuário e Senha) e assista instantaneamente.
+          </p>
+        </div>
+        <div class="form-card">
+          <div style="font-size:1.8rem; margin-bottom:8px">📺</div>
+          <h4 style="color:#fff; font-size:1.1rem; margin-bottom:6px">LG Smart TV (webOS)</h4>
+          <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.5">
+            Na LG Content Store, busque por <strong>IPTV Smarters</strong> ou <strong>SmartOne IPTV</strong>. Configure com os dados recebidos pelo WhatsApp.
+          </p>
+        </div>
+        <div class="form-card">
+          <div style="font-size:1.8rem; margin-bottom:8px">🔥</div>
+          <h4 style="color:#fff; font-size:1.1rem; margin-bottom:6px">Amazon Fire TV Stick</h4>
+          <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.5">
+            Instale o app <strong>Downloader</strong> e baixe o <strong>TiviMate IPTV Player</strong> ou <strong>XCIPTV</strong>. A melhor experiência em TV com guia EPG de 7 dias.
+          </p>
+        </div>
+        <div class="form-card">
+          <div style="font-size:1.8rem; margin-bottom:8px">🤖</div>
+          <h4 style="color:#fff; font-size:1.1rem; margin-bottom:6px">Android TV & TV Box</h4>
+          <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.5">
+            Abra a Google Play Store na sua TV ou TV Box, instale o <strong>TiviMate</strong> ou use este próprio aplicativo web otimizado em tela cheia.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= PAGE 8: PAINEL ADMINISTRATIVO ================= -->
+    <div id="page-admin" class="app-page" style="display:none">
+      <div class="admin-dashboard-container">
+        <div class="admin-header-row">
+          <div>
+            <span class="admin-badge">Painel de Controle Central</span>
+            <h1 style="font-size:2.2rem; font-weight:800; color:#fff; margin-top:6px">Administração Plataoplomo TV</h1>
+          </div>
+          <div>
+            <button class="btn-gold tv-focusable" id="btn-trigger-catalog-sync">
+              <span>⚡ Executar Sincronização Agora</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Telemetry Metrics -->
+        <div class="admin-metrics-grid">
+          <div class="metric-card">
+            <div class="metric-title">Canais Cadastrados</div>
+            <div class="metric-num" id="metric-total-channels">--</div>
+            <div class="metric-hint"><span>●</span> Sincronizados com a grade</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-title">Transmissões Online</div>
+            <div class="metric-num" id="metric-online-streams" style="color:var(--green)">--</div>
+            <div class="metric-hint"><span>●</span> 100% servidores ativos</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-title">Catálogo VOD (Filmes + Séries)</div>
+            <div class="metric-num" id="metric-total-vod">--</div>
+            <div class="metric-hint"><span>●</span> Resoluções 4K HDR e 1080p</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-title">Uptime do Servidor</div>
+            <div class="metric-num" id="metric-server-uptime">--</div>
+            <div class="metric-hint"><span>●</span> Sem quedas de conexão</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-title">Consumo de Memória</div>
+            <div class="metric-num" id="metric-server-memory">--</div>
+            <div class="metric-hint"><span>●</span> Otimizado para Smart TV</div>
+          </div>
+        </div>
+
+        <!-- Admin Navigation Tabs -->
+        <div class="admin-tabs-bar">
+          <button class="admin-tab-btn active tv-focusable" data-tab="channels">📡 Gerenciar Canais</button>
+          <button class="admin-tab-btn tv-focusable" data-tab="addchannel">➕ Adicionar Canal</button>
+          <button class="admin-tab-btn tv-focusable" data-tab="tester">🔍 Testador de Streams (Live Ping)</button>
+          <button class="admin-tab-btn tv-focusable" data-tab="synclogs">📋 Logs de Sincronização</button>
+        </div>
+
+        <!-- Tab 1: Channels List Table -->
+        <div id="tab-panel-channels" class="admin-tab-panel active">
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Logo</th>
+                  <th>Nome do Canal</th>
+                  <th>Qualidade</th>
+                  <th>Categoria</th>
+                  <th>Status</th>
+                  <th>URL do Stream</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="admin-channels-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 2: Add Channel Form -->
+        <div id="tab-panel-addchannel" class="admin-tab-panel">
+          <div class="form-card">
+            <h3 style="color:#fff; font-size:1.2rem; margin-bottom:20px">Cadastrar Novo Canal de Transmissão</h3>
+            <form id="form-add-channel">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label">Nome do Canal</label>
+                  <input type="text" id="new-ch-name" class="form-input tv-focusable" placeholder="Ex: ESPN Brasil 4K" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Número do Canal</label>
+                  <input type="number" id="new-ch-number" class="form-input tv-focusable" value="100">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Categoria</label>
+                  <select id="new-ch-category" class="form-select tv-focusable">
+                    <option value="sports">Esportes Ao Vivo</option>
+                    <option value="open">TV Aberta & Nacional</option>
+                    <option value="movies_series">Filmes & Séries</option>
+                    <option value="news">Notícias 24h</option>
+                    <option value="kids">Infantil</option>
+                    <option value="docs">Documentários</option>
+                    <option value="international">Internacionais</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Qualidade / Resolução</label>
+                  <select id="new-ch-quality" class="form-select tv-focusable">
+                    <option value="4K HDR">4K HDR (Ultra HD)</option>
+                    <option value="1080p FHD" selected>1080p FHD (Full HD)</option>
+                    <option value="720p HD">720p HD</option>
+                  </select>
+                </div>
+                <div class="form-group" style="grid-column: 1/-1">
+                  <label class="form-label">URL da Fonte de Transmissão (HLS .m3u8 ou MP4)</label>
+                  <input type="url" id="new-ch-stream" class="form-input tv-focusable" placeholder="https://exemplo.com/stream.m3u8" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">URL do Logotipo</label>
+                  <input type="url" id="new-ch-logo" class="form-input tv-focusable" placeholder="https://exemplo.com/logo.png">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Descrição</label>
+                  <input type="text" id="new-ch-desc" class="form-input tv-focusable" placeholder="Descrição da programação">
+                </div>
+              </div>
+              <div style="display:flex; justify-content:flex-end; gap:12px">
+                <button type="submit" class="btn-gold tv-focusable">Salvar Canal</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Tab 3: Stream Health Check Tester -->
+        <div id="tab-panel-tester" class="admin-tab-panel">
+          <div class="stream-tester-box">
+            <h3 style="color:#fff; font-size:1.2rem; margin-bottom:12px">Testador de Disponibilidade e Latência de Streams</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:20px">
+              Digite uma URL HLS ou MP4 para executar uma verificação em tempo real: status HTTP, tempo de resposta (ms), headers de decodificação e teste de reprodução.
+            </p>
+            <div style="display:flex; gap:12px; flex-wrap:wrap">
+              <input type="url" id="tester-stream-url" class="form-input tv-focusable" style="flex:1; min-width:300px" placeholder="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8">
+              <button class="btn-gold tv-focusable" id="btn-run-stream-test">Testar Fonte Agora</button>
+            </div>
+            <div id="tester-result-box" class="tester-result-card"></div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Sync History Logs -->
+        <div id="tab-panel-synclogs" class="admin-tab-panel">
+          <div class="form-card">
+            <h3 style="color:#fff; font-size:1.2rem; margin-bottom:16px">Histórico de Sincronizações do Catálogo</h3>
+            <div id="admin-sync-logs-list"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= PROFESSIONAL OTT VIDEO PLAYER OVERLAY ================= -->
+  <div id="player-view-container" class="player-view-container">
+    <div class="video-wrapper">
+      <video id="main-video" playsinline webkit-playsinline></video>
+
+      <!-- Buffering Spinner -->
+      <div id="player-buffering-overlay" class="player-buffering-overlay">
+        <div class="stream-spinner"></div>
+        <div class="buffering-text">Conectando ao servidor dedicado...</div>
+      </div>
+
+      <!-- Error Overlay -->
+      <div id="player-error-overlay" class="player-error-overlay">
+        <div class="player-error-icon">⚠️</div>
+        <div class="player-error-title">Falha Temporária na Transmissão</div>
+        <div id="player-error-desc" class="player-error-desc">Não foi possível carregar a fonte de vídeo.</div>
+        <div class="player-error-actions">
+          <button id="btn-retry-stream" class="btn-gold tv-focusable">🔄 Tentar Novamente</button>
+          <button onclick="Player.close()" class="btn-secondary tv-focusable">Voltar</button>
+        </div>
+      </div>
+
+      <!-- Top OSD -->
+      <div class="player-top-osd">
+        <div class="player-info-meta">
+          <button id="btn-player-back" class="btn-player-back tv-focusable" title="Voltar (Esc)">←</button>
+          <img id="player-channel-logo" class="player-channel-logo" src="" alt="">
+          <div class="player-title-box">
+            <span id="player-media-title" class="player-title-text">Canal</span>
+            <span id="player-media-subtitle" class="player-subtitle-text">Programação</span>
+          </div>
+        </div>
+        <div class="player-badges-box">
+          <span id="player-live-badge" class="badge-live-tag">● AO VIVO</span>
+          <select id="player-quality-select" class="form-select tv-focusable" style="padding:4px 8px; font-size:0.75rem; background:rgba(0,0,0,0.7)">
+            <option value="-1">Auto 4K</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- EPG Guide Bar (Shown on Info key) -->
+      <div id="player-epg-guide-bar" class="player-epg-guide-bar">
+        <div style="display:flex; justify-content:space-between; align-items:center">
+          <div>
+            <div style="font-size:0.8rem; color:var(--gold); font-weight:700">GUIA DE PROGRAMAÇÃO EPG</div>
+            <div style="font-size:1.1rem; font-weight:800; color:#fff" id="epg-overlay-title">Transmissão em Andamento</div>
+          </div>
+          <div style="font-size:0.85rem; color:var(--champagne)">Latência: &lt; 5s • 4K HDR</div>
+        </div>
+      </div>
+
+      <!-- Bottom OSD -->
+      <div class="player-bottom-osd">
+        <!-- VOD Timeline Seekbar -->
+        <div id="player-timeline-wrap" class="player-timeline-wrap">
+          <span id="time-current" class="time-display">00:00</span>
+          <div id="player-seek-bar" class="player-seek-bar tv-focusable">
+            <div id="player-seek-progress" class="player-seek-progress">
+              <div class="player-seek-handle"></div>
+            </div>
+          </div>
+          <span id="time-total" class="time-display">00:00</span>
+        </div>
+
+        <!-- Controls Row -->
+        <div class="player-controls-row">
+          <div class="controls-left">
+            <button id="btn-player-play" class="btn-control btn-control-play tv-focusable" title="Play / Pause (Espaço)">⏸</button>
+            <button id="btn-player-aspect" class="btn-control tv-focusable" title="Proporção de Tela">⛶ Aspecto</button>
+            <button id="btn-player-channels" class="btn-control tv-focusable" title="Lista de Canais (Troca Rápida)">📋 Canais</button>
+          </div>
+          <div class="controls-right">
+            <button id="btn-player-fullscreen" class="btn-control tv-focusable" title="Tela Cheia (F)">🗖 Tela Cheia</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Channel Surfing Sidebar (Right) -->
+      <div id="player-channel-overlay" class="player-channel-overlay">
+        <div class="channel-overlay-header">
+          <h3 style="color:#fff; font-size:1.1rem">Troca Rápida de Canais</h3>
+          <button id="btn-close-channel-overlay" class="modal-close-btn tv-focusable" style="position:static">✕</button>
+        </div>
+        <div class="channel-overlay-list" id="channel-overlay-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= VIRTUAL TV REMOTE CONTROL WIDGET ================= -->
+  <button id="btn-virtual-remote-toggle" class="virtual-remote-toggle tv-focusable">
+    <span>🎮</span>
+    <span>Controle Remoto TV</span>
+  </button>
+
+  <div id="virtual-remote-panel" class="virtual-remote-panel">
+    <div class="remote-header">
+      <span>CONTROLE REMOTO ANDROID TV</span>
+      <button id="btn-close-remote" style="background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:1.1rem">✕</button>
+    </div>
+
+    <!-- D-Pad Direction Circle -->
+    <div class="dpad-container">
+      <button class="dpad-btn dpad-up" id="remote-up" title="Cima (ArrowUp)">▲</button>
+      <button class="dpad-btn dpad-down" id="remote-down" title="Baixo (ArrowDown)">▼</button>
+      <button class="dpad-btn dpad-left" id="remote-left" title="Esquerda (ArrowLeft)">◀</button>
+      <button class="dpad-btn dpad-right" id="remote-right" title="Direita (ArrowRight)">▶</button>
+      <button class="dpad-center" id="remote-ok" title="Confirmar (Enter)">OK</button>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="remote-actions-row">
+      <button class="remote-btn" id="remote-back">↩ Voltar</button>
+      <button class="remote-btn" id="remote-home">🏠 Home</button>
+      <button class="remote-btn" id="remote-playpause">⏯ Play/Pause</button>
+      <button class="remote-btn" id="remote-info">ℹ Info / EPG</button>
+    </div>
+
+    <div class="remote-hint-text">
+      Dica: Você também pode usar as <strong>setas do teclado</strong>, <strong>Enter</strong> e <strong>Esc</strong>!
+    </div>
+  </div>
+
+  <!-- ================= GLOBAL MODAL OVERLAY ================= -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-window">
+      <button class="modal-close-btn tv-focusable" id="btn-close-modal">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ================= TOAST NOTIFICATIONS ================= -->
+  <div id="toast-container"></div>
+
+  <!-- ================= APPLICATION FOOTER ================= -->
+  <footer class="app-footer">
+    <div class="footer-inner">
+      <div class="brand-logo" data-route="home">
+        <div class="logo-badge">P</div>
+        <div class="brand-name">Plataoplomo<span>TV</span></div>
+      </div>
+      <p style="max-width:650px; font-size:0.85rem">
+        Plataoplomo TV — A plataforma premium de IPTV e streaming mais estável do Brasil. Compatível com Samsung Smart TV, LG Smart TV, Amazon Fire TV Stick, Android TV, Google TV, Apple TV e PC.
+      </p>
+      <div class="footer-links">
+        <a href="#home" data-route="home">Início</a>
+        <a href="#live" data-route="live">Canais Ao Vivo</a>
+        <a href="#movies" data-route="movies">Filmes</a>
+        <a href="#series" data-route="series">Séries</a>
+        <a href="#settings" data-route="settings">Configurações</a>
+        <a href="#admin" data-route="admin">Painel Administrativo</a>
+        <a href="#" class="btn-teste-gratis">Teste Grátis 6h</a>
+      </div>
+      <div style="font-size:0.75rem; color:var(--text-dim); border-top:1px solid var(--border); padding-top:20px; width:100%">
+        © 2026 Plataoplomo TV. Todos os direitos reservados. Plataforma tecnológica para reprodução autorizada de conteúdos multimídia.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/storage.js"></script>
+  <script src="/js/remote.js"></script>
+  <script src="/js/player.js"></script>
+  <script src="/js/live.js"></script>
+  <script src="/js/vod.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/admin.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
