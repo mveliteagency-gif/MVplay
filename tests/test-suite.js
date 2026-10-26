@@ -86,9 +86,9 @@ async function runTests() {
 
   // 4. Channel Details & EPG
   await test('GET /api/channels/:id retorna canal com programação EPG', async () => {
-    const res = await request('GET', '/api/channels/premiere-clubes');
+    const res = await request('GET', '/api/channels/redbull-tv-sports');
     assert.strictEqual(res.status, 200);
-    assert.strictEqual(res.data.id, 'premiere-clubes');
+    assert.strictEqual(res.data.id, 'redbull-tv-sports');
     assert(Array.isArray(res.data.schedule), 'Deve conter grade EPG');
   });
 
